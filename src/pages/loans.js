@@ -70,7 +70,7 @@ export default function loansPage(container) {
         <!-- Loan Programs Grid -->
         <div class="mb-8">
           <h3 class="font-bold mb-4" style="font-size: var(--text-base); color: var(--color-text);">Available Government Subsidies & Shariah Programs</h3>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-4);">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: var(--space-4);">
             ${loanPrograms.map(prog => `
               <div class="card" style="border: 1px solid var(--color-border-light); display: flex; flex-direction: column; justify-content: space-between;">
                 <div class="card-body-full">

@@ -99,7 +99,7 @@ export default function khataBookPage(container) {
             })}
 
             <!-- Grid of Customer Cards -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-4); margin-top: var(--space-4);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: var(--space-4); margin-top: var(--space-4);">
               ${filteredCustomers.map(c => {
                 const badgeType = c.status === 'cleared' ? 'success' : (c.status === 'overdue' ? 'danger' : 'warning');
                 const badgeText = c.status.toUpperCase();

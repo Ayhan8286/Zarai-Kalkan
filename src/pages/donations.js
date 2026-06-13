@@ -55,7 +55,7 @@ export default function donationsPage(container) {
         <!-- Campaigns Grid -->
         <div class="mb-8">
           <h3 class="font-bold mb-4" style="font-size: var(--text-base); color: var(--color-text);">Open Community Funding & Farmer Aid Campaigns</h3>
-          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: var(--space-4);">
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr)); gap: var(--space-4);">
             ${campaigns.map(c => {
               const percentage = c.amountNeeded > 0 ? (c.amountRaised / c.amountNeeded) * 100 : 0;
               const type = percentage >= 80 ? 'green' : (percentage >= 40 ? '' : 'warning');

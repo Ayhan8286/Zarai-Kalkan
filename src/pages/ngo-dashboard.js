@@ -69,7 +69,7 @@ export default function ngoDashboard(container) {
               <h3 class="card-header-title">Pakistan Districts Risk Monitoring Board</h3>
             </div>
             <div class="card-body-full" style="padding: var(--space-5);">
-              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4);">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: var(--space-4);">
                 ${districts.map(d => {
                   const levelClass = d.status === 'green' ? 'success' : (d.status === 'red' ? 'danger' : 'warning');
                   const desc = d.status === 'green' ? 'Normal Conditions' : (d.status === 'red' ? 'Emergency Loss' : 'Moderate Weather Alert');

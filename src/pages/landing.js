@@ -285,6 +285,10 @@ export default function landing(container) {
         .landing-roles { grid-template-columns: repeat(2, 1fr); }
         .landing-features { gap: 1rem; }
       }
+
+      @media (max-width: 480px) {
+        .landing-roles { grid-template-columns: 1fr; }
+      }
     </style>
   `;
 }

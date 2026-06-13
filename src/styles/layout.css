@@ -401,7 +401,7 @@
 /* --- Stats Grid --- */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: var(--space-5);
   margin-bottom: var(--space-6);
 }
@@ -409,21 +409,21 @@
 /* --- Cards Grid --- */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: var(--space-5);
   margin-bottom: var(--space-6);
 }
 
 .cards-grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
   gap: var(--space-5);
   margin-bottom: var(--space-6);
 }
 
 .cards-grid-2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
   gap: var(--space-5);
   margin-bottom: var(--space-6);
 }
@@ -568,6 +568,10 @@
 @media (max-width: 1200px) {
   .grid-cols-4 {
     grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .grid-cols-4 .col-span-3,
+  .grid-cols-4 .col-span-2 {
+    grid-column: span 2 / span 2 !important;
   }
 }
 

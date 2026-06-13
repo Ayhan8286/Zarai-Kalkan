@@ -134,7 +134,7 @@ export default function insurancePage(container) {
     }
 
     return `
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--space-4);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: var(--space-4);">
         ${policies.map(p => {
           const isTakaful = p.takaful ?? true;
           return `
@@ -192,7 +192,7 @@ export default function insurancePage(container) {
         </select>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: var(--space-4);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr)); gap: var(--space-4);">
         ${plans.map(p => {
           return `
             <div class="card" style="border: 1px solid var(--color-border-light); display: flex; flex-direction: column; justify-content: space-between;">

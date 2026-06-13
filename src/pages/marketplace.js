@@ -69,7 +69,7 @@ export default function marketplacePage(container) {
             })}
 
             <!-- Product Grid -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--space-4); margin-top: var(--space-4);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: var(--space-4); margin-top: var(--space-4);">
               ${filteredProducts.map(p => {
                 const isOwnProduct = p.sellerId === currentUser.id;
                 

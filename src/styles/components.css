@@ -1331,12 +1331,14 @@
 
 /* --- SMS Simulation --- */
 .sms-phone {
+  width: 100%;
   max-width: 320px;
   margin: 0 auto;
   background: #1A1A2E;
   border-radius: 36px;
   padding: 16px;
   box-shadow: var(--shadow-xl);
+  box-sizing: border-box;
 }
 
 .sms-screen {
@@ -1348,6 +1350,15 @@
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   line-height: 1.8;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .sms-screen {
+    min-height: 380px;
+    font-size: var(--text-xs);
+    padding: var(--space-4);
+  }
 }
 
 .sms-header-text {

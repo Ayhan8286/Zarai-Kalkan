@@ -89,7 +89,7 @@ export default function knowledgeCenterPage(container) {
             })}
 
             <!-- Netflix style video/lesson card grid -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-4); margin-top: var(--space-4);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: var(--space-4); margin-top: var(--space-4);">
               ${filteredLessons.map(l => {
                 const isCompleted = completed.includes(l.id);
                 return `
