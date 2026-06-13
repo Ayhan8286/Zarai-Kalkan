@@ -1,0 +1,81 @@
+/* ============================================
+   ZARAI KALKAN — RTL Overrides
+   Additional fixes for right-to-left layout
+   ============================================ */
+
+/* RTL-specific icon flipping */
+[dir="rtl"] .nav-icon svg,
+[dir="rtl"] .header-search-icon svg {
+  /* Don't flip generic icons */
+}
+
+/* Flip directional icons only */
+[dir="rtl"] .icon-arrow,
+[dir="rtl"] .icon-chevron {
+  transform: scaleX(-1);
+}
+
+/* Charts should remain LTR */
+[dir="rtl"] .chart-container {
+  direction: ltr;
+}
+
+/* Select dropdown arrow position */
+[dir="rtl"] .form-select {
+  background-position: left 12px center;
+}
+
+[dir="rtl"] .filter-select {
+  background-position: left 10px center;
+}
+
+/* Toast animations for RTL */
+[dir="rtl"] .toast {
+  animation-name: slideInLeft;
+}
+
+/* Sidebar adjustments */
+[dir="rtl"] .stat-card::before {
+  border-radius: 4px 0 0 4px;
+}
+
+/* Font adjustments for Urdu/Nastaliq */
+[dir="rtl"] .stat-card-value {
+  font-family: var(--font-primary);
+  direction: ltr;
+  text-align: end;
+}
+
+[dir="rtl"] .product-card-price {
+  font-family: var(--font-primary);
+  direction: ltr;
+  text-align: end;
+}
+
+/* Numbers stay LTR in RTL context */
+[dir="rtl"] .data-table td:has(.currency),
+[dir="rtl"] .stat-card-value,
+[dir="rtl"] .score-value {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+/* Nastaliq line height adjustments */
+[dir="rtl"] .nav-item {
+  line-height: 2;
+}
+
+[dir="rtl"] .btn {
+  line-height: 2;
+}
+
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3 {
+  line-height: 2;
+}
+
+/* FAB position */
+@media (max-width: 768px) {
+  [dir="rtl"] .fab {
+    inset-inline-end: var(--space-4);
+  }
+}

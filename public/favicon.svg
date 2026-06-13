@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Shield -->
+  <path d="M32 4 L56 16 L56 36 Q56 52 32 60 Q8 52 8 36 L8 16 Z" fill="#2E7D32" stroke="#1B5E20" stroke-width="2"/>
+  <!-- Inner shield highlight -->
+  <path d="M32 8 L52 18 L52 35 Q52 49 32 56 Q12 49 12 35 L12 18 Z" fill="#4CAF50" opacity="0.3"/>
+  <!-- Wheat stalk left -->
+  <ellipse cx="26" cy="24" rx="3" ry="6" fill="#F9A825" transform="rotate(-15 26 24)"/>
+  <ellipse cx="24" cy="30" rx="2.5" ry="5" fill="#F9A825" transform="rotate(-10 24 30)"/>
+  <!-- Wheat stalk right -->
+  <ellipse cx="38" cy="24" rx="3" ry="6" fill="#F9A825" transform="rotate(15 38 24)"/>
+  <ellipse cx="40" cy="30" rx="2.5" ry="5" fill="#F9A825" transform="rotate(10 40 30)"/>
+  <!-- Center stem -->
+  <line x1="32" y1="20" x2="32" y2="48" stroke="#8D6E63" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Center wheat -->
+  <ellipse cx="32" cy="20" rx="3.5" ry="7" fill="#F9A825"/>
+  <!-- Small leaves -->
+  <path d="M32 36 Q26 32 24 36" fill="none" stroke="#2E7D32" stroke-width="1.5"/>
+  <path d="M32 36 Q38 32 40 36" fill="none" stroke="#2E7D32" stroke-width="1.5"/>
+  <path d="M32 42 Q27 38 25 42" fill="none" stroke="#2E7D32" stroke-width="1.5"/>
+  <path d="M32 42 Q37 38 39 42" fill="none" stroke="#2E7D32" stroke-width="1.5"/>
+</svg>

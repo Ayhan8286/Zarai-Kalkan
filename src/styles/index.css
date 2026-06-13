@@ -1,0 +1,266 @@
+/* ============================================
+   ZARAI KALKAN — Design System
+   "Protecting, Connecting, and Empowering Rural Pakistan"
+   ============================================ */
+
+/* --- CSS Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Primary Colors */
+  --color-primary: #2E7D32;
+  --color-primary-light: #4CAF50;
+  --color-primary-lighter: #81C784;
+  --color-primary-dark: #1B5E20;
+  --color-primary-bg: rgba(46, 125, 50, 0.08);
+  --color-primary-bg-hover: rgba(46, 125, 50, 0.14);
+
+  /* Secondary Colors */
+  --color-secondary: #8D6E63;
+  --color-secondary-light: #A1887F;
+  --color-secondary-dark: #6D4C41;
+
+  /* Accent */
+  --color-accent: #F9A825;
+  --color-accent-light: #FFD54F;
+  --color-accent-dark: #F57F17;
+
+  /* Semantic Colors */
+  --color-safe: #4CAF50;
+  --color-safe-bg: rgba(76, 175, 80, 0.1);
+  --color-warning: #FFC107;
+  --color-warning-bg: rgba(255, 193, 7, 0.12);
+  --color-danger: #F44336;
+  --color-danger-bg: rgba(244, 67, 54, 0.1);
+  --color-info: #2196F3;
+  --color-info-bg: rgba(33, 150, 243, 0.1);
+
+  /* Women Entrepreneur Theme */
+  --color-women: #8E6FAF;
+  --color-women-light: #B39DDB;
+  --color-women-bg: rgba(142, 111, 175, 0.08);
+
+  /* Backgrounds & Surfaces */
+  --color-bg: #F7F9F8;
+  --color-bg-alt: #EEF2F0;
+  --color-card: #FFFFFF;
+  --color-card-hover: #FAFFFE;
+
+  /* Text */
+  --color-text: #1A1A2E;
+  --color-text-secondary: #4A5568;
+  --color-text-muted: #6B7280;
+  --color-text-light: #9CA3AF;
+  --color-text-inverse: #FFFFFF;
+
+  /* Borders */
+  --color-border: #E5E7EB;
+  --color-border-light: #F3F4F6;
+  --color-border-focus: #2E7D32;
+
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-urdu: 'Noto Nastaliq Urdu', 'Noto Sans Arabic', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  --leading-tight: 1.25;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.12);
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+  --transition-spring: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Layout */
+  --sidebar-width: 260px;
+  --sidebar-collapsed: 72px;
+  --header-height: 70px;
+  --page-max-width: 1400px;
+
+  /* Z-index */
+  --z-sidebar: 100;
+  --z-header: 200;
+  --z-modal-overlay: 500;
+  --z-modal: 600;
+  --z-toast: 700;
+  --z-tooltip: 800;
+}
+
+/* --- Base Styles --- */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  background: var(--color-bg);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* RTL font switch */
+[dir="rtl"] body {
+  font-family: var(--font-urdu);
+  line-height: 2;
+  font-size: 1.05rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in { animation: fadeIn 0.4s ease forwards; }
+.animate-fade-in-up { animation: fadeInUp 0.5s ease forwards; }
+.animate-fade-in-down { animation: fadeInDown 0.4s ease forwards; }
+.animate-slide-in-left { animation: slideInLeft 0.4s ease forwards; }
+.animate-slide-in-right { animation: slideInRight 0.4s ease forwards; }
+.animate-scale-in { animation: scaleIn 0.3s ease forwards; }
+
+/* Staggered animations for cards */
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.2s; }
+.stagger-5 { animation-delay: 0.25s; }
+.stagger-6 { animation-delay: 0.3s; }
+
+/* Skeleton loading */
+.skeleton {
+  background: linear-gradient(90deg, var(--color-border-light) 25%, var(--color-bg) 50%, var(--color-border-light) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-md);
+}
